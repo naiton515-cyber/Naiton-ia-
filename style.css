@@ -1,49 +1,121 @@
+/* Fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-    background: #0f172a; /* azul escuro moderno */
-    color: #e2e8f0; /* texto suave */
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-}
-
-h1 {
-    color: #38bdf8; /* azul claro destaque */
-}
-
-#chat {
-    height: 400px;
-    overflow-y: auto;
-    border: 1px solid #334155;
-    padding: 10px;
-    margin-bottom: 10px;
-    background: #1e293b; /* fundo do chat */
-    border-radius: 10px;
-}
-
-input {
-    width: 70%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    background: #334155;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
 }
 
-button {
-    padding: 10px 15px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background: #38bdf8;
-    color: #0f172a;
-    font-weight: bold;
+/* Container geral */
+.container {
+    max-width: 500px;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-button:hover {
-    background: #0ea5e9;
+/* Topo */
+h1 {
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    background: #020617;
+    border-bottom: 1px solid #1e293b;
 }
+
+/* Área do chat */
+#chat {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mensagens */
+.msg {
+    padding: 10px 14px;
+    margin: 5px 0;
+    border-radius: 12px;
+    max-width: 75%;
+    font-size: 14px;
+    line-height: 1.4;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Usuário (direita tipo WhatsApp) */
+.user {
+    background: #2563eb;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+/* Bot (esquerda) */
+.bot {
+    background: #334155;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+/* Área de input */
+.input-area {
+    display: flex;
+    padding: 10px;
+    background: #020617;
+    border-top: 1px solid #1e293b;
+}
+
+/* Input */
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Botão enviar */
+button {
+    margin-left: 10px;
+    background: #2563eb;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Hover efeito */
+button:hover {
+    background: #1d4ed8;
+    transform: scale(1.1);
+}
+
+/* Scroll bonito */
+#chat::-webkit-scrollbar {
+    width: 5px;
+}
+
+#chat::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 10px;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
