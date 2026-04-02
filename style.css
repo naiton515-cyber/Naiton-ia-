@@ -1,0 +1,49 @@
+body {
+    background: #0f172a; /* azul escuro moderno */
+    color: #e2e8f0; /* texto suave */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    color: #38bdf8; /* azul claro destaque */
+}
+
+#chat {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #334155;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #1e293b; /* fundo do chat */
+    border-radius: 10px;
+}
+
+input {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #334155;
+    color: white;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
