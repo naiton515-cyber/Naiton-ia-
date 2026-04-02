@@ -1,29 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #0f172a;
+    font-family: 'Inter', sans-serif;
+    background: #0b141a;
     color: white;
 }
 
 /* HEADER */
 .header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    background: #020617;
+    padding: 12px 15px;
+    background: #202c33;
+    position: sticky;
+    top: 0;
 }
 
 .menu {
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .profile {
     width: 35px;
     height: 35px;
-    background: #2563eb;
+    background: #25d366;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -33,27 +45,27 @@ body {
 /* SIDEBAR */
 .sidebar {
     position: fixed;
-    left: -250px;
+    left: -260px;
     top: 0;
-    width: 250px;
+    width: 260px;
     height: 100%;
-    background: #020617;
+    background: #111b21;
     padding: 20px;
     transition: 0.3s;
-    z-index: 2;
+    z-index: 3;
 }
 
 .sidebar.active {
     left: 0;
 }
 
-/* OVERLAY */
 .overlay {
     position: fixed;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.5);
     display: none;
+    z-index: 2;
 }
 
 .overlay.active {
@@ -71,54 +83,79 @@ body {
 
 /* MENSAGENS */
 .msg {
-    padding: 10px;
-    margin: 5px;
+    padding: 10px 14px;
+    margin: 6px;
     border-radius: 10px;
-    max-width: 80%;
+    max-width: 75%;
+    font-size: 14px;
+    line-height: 1.4;
+    animation: fadeIn 0.2s ease;
 }
 
+/* Usuário */
 .user {
-    background: #2563eb;
+    background: #005c4b;
     align-self: flex-end;
+    border-bottom-right-radius: 2px;
 }
 
+/* Bot */
 .bot {
-    background: #334155;
+    background: #202c33;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
 }
 
 /* INPUT */
 .input-area {
     display: flex;
     padding: 10px;
-    background: #020617;
+    background: #202c33;
+    position: sticky;
+    bottom: 0;
 }
 
 input {
     flex: 1;
-    padding: 10px;
-    border-radius: 20px;
+    padding: 12px;
+    border-radius: 25px;
     border: none;
+    outline: none;
+    background: #2a3942;
+    color: white;
+    font-size: 14px;
 }
 
 button {
     margin-left: 10px;
-    border-radius: 50%;
-    padding: 10px;
-    background: #2563eb;
-    color: white;
+    background: #25d366;
     border: none;
+    padding: 12px;
+    border-radius: 50%;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 /* DIGITANDO */
 .typing {
     display: flex;
     gap: 5px;
+    background: #202c33;
+    padding: 10px;
+    border-radius: 10px;
+    width: fit-content;
 }
 
 .typing span {
     width: 6px;
     height: 6px;
-    background: white;
+    background: #ccc;
     border-radius: 50%;
     animation: bounce 1s infinite;
 }
@@ -129,4 +166,18 @@ button {
 @keyframes bounce {
     0%,80%,100%{transform:scale(0);}
     40%{transform:scale(1);}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(5px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* SCROLL */
+#chat::-webkit-scrollbar {
+    width: 4px;
+}
+#chat::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
 }
