@@ -1,4 +1,4 @@
-const apiKey = "COLOCA_TUA_API_KEY_AQUI";
+const apiKey = "AIzaSyBwh8Vbc9z9-dGmA0eUfsjLs3UZ8gRTZ6";
 const cx = "f04dbeefbaf124da5";
 
 // MENU
