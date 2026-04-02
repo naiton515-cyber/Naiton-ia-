@@ -1,28 +1,41 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Naiton AI</title>
-
-    <!-- CSS externo -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naiton AI</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
-    <h1>🤖 Naiton AI</h1>
-
-    <div id="chat"></div>
-
-    <div class="input-area">
-        <input type="text" id="input" placeholder="Pergunta algo...">
-        <button id="btnEnviar">➤</button>
-    </div>
+<!-- MENU LATERAL -->
+<div id="sidebar" class="sidebar">
+    <h2>Menu</h2>
+    <p>🤖 Naiton AI</p>
+    <p>⚙️ Configurações</p>
+    <p>ℹ️ Sobre</p>
 </div>
 
-<!-- JS externo -->
-<script src="script.js"></script>
+<!-- OVERLAY -->
+<div id="overlay" class="overlay"></div>
 
+<!-- HEADER -->
+<div class="header">
+    <div class="menu" onclick="toggleMenu()">☰</div>
+    <div class="title">Naiton AI</div>
+    <div class="profile">N</div>
+</div>
+
+<!-- CHAT -->
+<div id="chat"></div>
+
+<!-- INPUT -->
+<div class="input-area">
+    <input type="text" id="input" placeholder="Escreve uma mensagem...">
+    <button id="btnEnviar">➤</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
