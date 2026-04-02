@@ -35,7 +35,7 @@ async function enviar() {
         if (data.items && data.items.length > 0) {
             resposta = data.items[0].snippet;
         } else {
-            resposta = "Não encontrei nada 😅";
+            resposta = "Muh não presta 😑";
         }
     } catch {
         resposta = "Erro ao pesquisar 😢";
